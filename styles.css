@@ -63,12 +63,6 @@ body {
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.tile:hover {
-  transform: scale(1.025);
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
 }
 
 .tile-overlay {
