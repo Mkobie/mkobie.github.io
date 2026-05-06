@@ -35,6 +35,15 @@ body {
   color: var(--accent);
 }
 
+.site-title-link {
+  display: block;
+  text-decoration: none;
+}
+
+.site-title-link:hover {
+  text-decoration: none;
+}
+
 .about-link {
   position: absolute;
   right: 48px;
@@ -158,6 +167,43 @@ body {
   background: #edb08e;
 }
 
+/* Project page banner */
+.project-banner {
+  width: 100%;
+  margin: 12px 0 0;
+  padding: 24px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.project-banner-overlay {
+  width: 100%;
+  padding: 18px 24px;
+  background: var(--overlay-bg);
+  color: white;
+}
+
+.project-banner-overlay h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: 0.035em;
+  line-height: 1.2;
+}
+
+.project-meta {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 14px 48px 0;
+}
+
+.project-meta .project-date {
+  margin: 0;
+}
+
+/* Project and about pages */
 .page-content {
   max-width: 780px;
   margin: 0 auto;
@@ -207,6 +253,22 @@ body {
 
   .portfolio-wrapper {
     padding: 24px 28px 48px;
+  }
+
+  .project-banner {
+    padding: 0 28px;
+  }
+
+  .project-banner-overlay {
+    max-width: 90%;
+  }
+
+  .project-meta {
+    padding: 14px 28px 0;
+  }
+
+  .page-content {
+    padding: 32px 28px 80px;
   }
 }
 
