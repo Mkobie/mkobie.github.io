@@ -137,6 +137,12 @@ body {
   margin-top: 0;
 }
 
+.project-date {
+  color: #666;
+  font-size: 15px;
+  margin-top: -12px;
+}
+
 /* Medium screens */
 @media (max-width: 1000px) {
   .tile-grid {
