@@ -83,7 +83,7 @@ body {
   font-weight: 300;
   letter-spacing: 0.02em;
   line-height: 1.25;
-  transform: translate(-82%, -50%);
+  transform: translate(-100%, -50%);
   transition: transform 0.22s ease;
 }
 
