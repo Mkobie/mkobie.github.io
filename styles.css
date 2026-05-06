@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --accent: #d03f05;
+  --page-bg: #f7f7f7;
+  --text: #111;
+  --overlay-bg: rgba(70, 70, 70, 0.72);
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--page-bg);
+  color: var(--text);
+}
+
+.site-header {
+  position: relative;
+  padding: 28px 32px 20px;
+}
+
+.site-title {
+  margin: 0;
+  text-align: center;
+  font-size: 42px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.about-link {
+  position: absolute;
+  top: 38px;
+  right: 48px;
+  font-size: 16px;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.about-link:hover {
+  text-decoration: underline;
+}
+
+.portfolio-wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 28px 48px 64px;
+}
+
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.tile {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tile:hover {
+  transform: scale(1.025);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+}
+
+.tile-overlay {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 90%;
+  padding: 14px 18px;
+  background: var(--overlay-bg);
+  color: white;
+  font-size: 18px;
+  line-height: 1.25;
+  transform: translate(-82%, -50%);
+  transition: transform 0.22s ease;
+}
+
+.tile:hover .tile-overlay {
+  transform: translate(0, -50%);
+}
+
+.tile-overlay span {
+  display: block;
+}
+
+/* Temporary placeholder tile colours */
+.tile-1 {
+  background: #d03f05;
+}
+
+.tile-2 {
+  background: #b93708;
+}
+
+.tile-3 {
+  background: #e0642d;
+}
+
+.tile-4 {
+  background: #8f2c08;
+}
+
+.tile-5 {
+  background: #f08a55;
+}
+
+.tile-6 {
+  background: #6f2409;
+}
+
+.tile-7 {
+  background: #c75524;
+}
+
+.tile-8 {
+  background: #edb08e;
+}
+
+/* Medium screens */
+@media (max-width: 1000px) {
+  .tile-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .portfolio-wrapper {
+    max-width: 900px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 760px) {
+  .site-title {
+    font-size: 34px;
+  }
+
+  .about-link {
+    position: static;
+    display: block;
+    margin-top: 12px;
+    text-align: center;
+  }
+
+  .tile-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-wrapper {
+    padding: 24px 28px 48px;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .tile-grid {
+    grid-template-columns: 1fr;
+  }
+}
