@@ -124,6 +124,19 @@ body {
   background: #edb08e;
 }
 
+.page-content {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 32px 48px 80px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.page-content h2 {
+  font-size: 28px;
+  margin-top: 0;
+}
+
 /* Medium screens */
 @media (max-width: 1000px) {
   .tile-grid {
@@ -163,3 +176,5 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+
