@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[C#] Unity Virtual Reality Game: Urban Kiz Practice</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-title site-title-link" href="../../../../index.html">Marianne Kobierski</a>
+    <a class="about-link" href="../../../../about.html">About me</a>
+  </header>
+
+  <main>
+    <section
+      class="project-banner"
+      style="background-image: url('../../../../assets/images/20260430_UrbanKiz/20260430_c-unity-virtual-reality-game-urban-kiz-practice.png');"
+    >
+      <div class="project-banner-overlay">
+        <h1>[C#] Unity Virtual Reality Game: Urban Kiz Practice</h1>
+      </div>
+    </section>
+
+    <section class="project-meta">
+      <p class="project-date">April 30, 2026</p>
+    </section>
+
+    <section class="page-content">
+      <p>
+        Have you ever looked at some piece of beautiful and abstract art and thought: "I could write a program that does that". I know I have!
+      </p>
+
+      <p>
+        Most recently I had this thought during an Urban Kiz dance class. Urban Kiz is a couple dance that's popular in the city I recently moved to. And unlike other dances like Lindy Hop or Salsa, the upper body stays quite still while all the action happens in the footwork. A feature that makes this dance extra programmable.
+      </p>
+
+      <p>
+        My goals here are threefold:
+      </p>
+
+      <ol>
+        <li>First, I intend to make an interactive cheat-sheet that will help myself and others learn the steps in a way that makes recall of the step and its name more intuitive.</li>
+        <li>Second, I want to make a VR game to put on an app store. Because how cool would that be?!</li>
+        <li>Finally, I will use this project as a chance to learn how to use AI effectively while coding. I have mixed feelings about AI, but recognize that using it is a skill that is becoming increasingly relevant in the industry I work in.</li>
+      </ol>
+
+      <p>
+        A further disclaimer on AI: I used ChatGPT and Claude Code heavily in coding this application. It's certainly been a learning experience!
+      </p>
+
+      <p>
+        Let's take a look at the web app and the VR app.
+      </p>
+
+      <h2>Web App</h2>
+
+      <figure class="content-figure">
+        <img
+          class="content-gif"
+          src="../../../../assets/images/20260430_UrbanKiz/20260430_WebUrbanKiz_DemoOldNew.gif"
+          alt="Animation comparing old and new implementations"
+        >
+        <figcaption>
+          How it started → How it's going
+        </figcaption>
+      </figure>
+
+      <p>
+        The webapp started as a helper, but quickly gained a life of its own. It serves to:
+      </p>
+
+      <ul>
+        <li>Act as a sandbox, providing me with quick feedback on foundational dance encoding mechanisms.</li>
+        <li>Socialize the concept, to see whether this is helpful for people beyond those of us who fall into the Venn diagram space between "kiz dancer" and "nerd".</li>
+      </ul>
+
+      <p>
+        Here it is, available to anyone to try. I hope you'll give it a go!
+      </p>
+
+      <figure class="content-figure">
+        <section class="wide-content">
+          <div class="scaled-iframe-wrapper">
+            <iframe
+              frameborder="0"
+              src="https://itch.io/embed-upload/17537582?color=333333"
+              allowfullscreen
+              width="1280"
+              height="770">
+              <a href="https://mkobie.itch.io/urban-kiz-practice-demo">Play on itch.io</a>
+            </iframe>
+          </div>
+        </section>
+        <figcaption>
+          <a href="https://mkobie.itch.io/urban-kiz-practice-demo" target="_blank">https://mkobie.itch.io/urban-kiz-practice-demo</a>
+        </figcaption>
+      </figure>
+
+      <h2>VR App</h2>
+
+      <p>
+        The VR app, on the other hand, is ultra exclusive: currently it only runs on my Meta Quest 2 headset.
+        As much as I'd love to have you try it out for real, for now you can get a sneak peek of a prototyping stage I went through, in the app below.
+      </p>
+
+      <p>
+        This demo app was born out of an interesting challenge that came up: once the player has learned a handful of different steps,
+        how can I use a VR environment to make the dance step I want them to do the most low friction, intuitive physical motion for them to make at a given moment?
+      </p>
+
+      <p>
+        How can I use the environment to shape the player's behaviour?
+      </p>
+
+      <p>
+        Do keep in mind that I want the player to have nice upright posture, not looking at the floor.
+        In the end the footprints will not be shown on the ground, as we don't want the player looking at their feet the whole time.
+      </p>
+
+      <p>
+        To try it out, use WASD to move, arrow keys to look around, and mouse to click on buttons.
+      </p>
+
+      <p>
+        The "guide" options provide different ways of communicating where the player should physically be at each point in time,
+        and the "intention" options provides two different ways of letting the player anticipate what direction is coming next.
+      </p>
+
+      <p>
+        In the end I settled on something similar to the fixed dance line, but inverted so that the line is the clear part.
+        What approach would you have picked?
+      </p>
+
+      <figure class="content-figure">
+        <section class="wide-content">
+          <div class="scaled-iframe-wrapper">
+            <iframe
+              frameborder="0"
+              src="https://itch.io/embed-upload/17352527?color=333333"
+              allowfullscreen
+              width="1280"
+              height="790">
+              <a href="https://mkobie.itch.io/vr-game-prototype">Play VR Game Prototype on itch.io</a>
+            </iframe>
+          </div>
+        </section>
+        <figcaption>
+          <a href="https://mkobie.itch.io/vr-game-prototype" target="_blank">https://mkobie.itch.io/vr-game-prototype</a>
+        </figcaption>
+      </figure>
+
+      <p>
+        Finally, I wanted to share how my git commit history looks.
+        Commit messages are documentation, and should provide a clear history for when you inevitably want to time-travel,
+        whether it's to recreate an old instance of your product to make a cool before/after gif,
+        or because you are debugging something and need to understand why a certain thing changed the way it did.
+      </p>
+
+      <figure class="content-figure">
+        <img
+          class="content-gif"
+          src="../../../../assets/images/20260430_UrbanKiz/20260430_kizapp_git.png"
+          alt="Git commit history for the Urban Kiz app"
+        >
+        <figcaption>
+          Sample of git commit history
+        </figcaption>
+      </figure>
+
+      <p>
+        That's it for now. Check back in a few months - maybe by then I'll have a link to the full game on Steam!
+      </p>
+    </section>
+
+  </main>
+</body>
+</html>

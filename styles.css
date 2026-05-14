@@ -235,6 +235,48 @@ body {
   margin-top: -12px;
 }
 
+.scaled-iframe-wrapper {
+  width: 824px;
+  height: 496px;
+  margin: 32px 0;
+  overflow: hidden;
+}
+
+.scaled-iframe-wrapper iframe {
+  display: block;
+  width: 1280px;
+  height: 770px;
+  transform: scale(0.64375);
+  transform-origin: top left;
+  border: 0;
+}
+
+.content-gif {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.content-figure {
+  margin: 24px 0;
+}
+
+.content-figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.content-figure figcaption {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.4;
+  color: #666;
+}
+
 /* Medium screens */
 @media (max-width: 1000px) {
   .tile-grid {
