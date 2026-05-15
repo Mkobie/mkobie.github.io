@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[Python] Surgery rehab tracker</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-title site-title-link" href="../../../../index.html">Marianne Kobierski</a>
+    <a class="about-link" href="../../../../about.html">About me</a>
+  </header>
+
+  <main>
+    <section
+      class="project-banner"
+      style="background-image: url('../../../../assets/images/20240909_rehab_tracker/20240909_mpfl-tto-surgery-rehab.png');"
+    >
+      <div class="project-banner-overlay">
+        <h1>[Python] Surgery rehab tracker</h1>
+      </div>
+    </section>
+
+    <section class="project-meta">
+      <p class="project-date">September 9, 2024</p>
+    </section>
+
+    <section class="page-content">
+      <p>
+        Tip: click <a href="https://mpfl-tto-surgery-rehab.onrender.com/" target="_blank">this link</a> to warm up the site before reading on - it can take up to a minute to spool up!
+      </p>
+
+      <p>
+        In Sept 2024 I had knee reconstruction surgery done. A main part of rehabilitation was learning how to bend my knee again, which required a careful balance of exercises and managing swelling.
+      </p>
+
+      <p>
+        To help with the rehab I made a Plotly Dash application using Python to visualize daily progress (bending, swelling, and moments of rest and exercise), as well as overall bending progress.
+      </p>
+
+      <figure class="content-figure">
+        <img
+          class="content-gif"
+          src="../../../../assets/images/20240909_rehab_tracker/20240909_mpfl-tto-surgery-rehab.png"
+          alt="Image of custom Python rehab tracker"
+        >
+        <figcaption>
+          Image of a page in the tracker
+        </figcaption>
+      </figure>
+
+      <p>
+        The application draws its data from a google spreadsheet, so as a user I entered data into the spreadsheet from my phone throughout the day, and could open the site to look at my progress any time.
+      </p>
+
+      <p>
+        The top two graphs show the bending angles and knee circumferences measured throughout a given day, and the vertical lines show moments of intensity in red (eg physio, exercises), and moments of rest (usually with ice and elevation) in green. Hovering over the lines at the x-axis of the angle graph shows a mouseover that provides details about what occurred during that moment.
+      </p>
+
+      <p>
+        The bottom graph shows all the bending data since the tracking started. 90 degrees is marked on the graph, as reaching this angle within 4 weeks was the initial main goal of the rehabilitation.
+      </p>
+
+      <p>
+        The data from the given day is shown on the lower graph in dark blue, helping the user orient themselves on how the specific day they're looking at fits into the overall rehabilitation journey.
+      </p>
+
+      <p>
+        Although I mainly made this tool for my own recovery, others are able to use it to visualize their own journeys, if they enter the link to their own version of the tracking spreadsheet in the top right corner. Instructions are provided in a modal (popup) that's accessed by the "?" button.
+      </p>
+
+      <p>
+        It's probably been a minute since you clicked the link at the top, please visit the application at <a href="https://mpfl-tto-surgery-rehab.onrender.com" target="_blank">https://mpfl-tto-surgery-rehab.onrender.com/</a>!
+      </p>
+    </section>
+
+  </main>
+
+  <div class="lightbox-overlay" id="lightbox">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    const overlay = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    document.querySelectorAll('.content-figure img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        overlay.classList.add('open');
+      });
+    });
+
+    overlay.addEventListener('click', () => overlay.classList.remove('open'));
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') overlay.classList.remove('open');
+    });
+  </script>
+</body>
+</html>
