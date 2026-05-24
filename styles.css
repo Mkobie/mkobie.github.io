@@ -300,6 +300,11 @@ a:hover {
   cursor: zoom-in;
 }
 
+.content-figure .image-collage > img {
+  flex: 1;
+  min-width: 0;
+}
+
 /* Lightbox */
 .lightbox-overlay {
   display: none;
