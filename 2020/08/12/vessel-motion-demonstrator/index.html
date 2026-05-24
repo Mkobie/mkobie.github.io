@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[Arduino] Vessel Motion Demonstrator</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-title site-title-link" href="../../../../index.html">Marianne Kobierski</a>
+    <a class="about-link" href="../../../../about.html">About me</a>
+  </header>
+
+  <main>
+    <section
+      class="project-banner"
+      style="background-image: url('../../../../assets/images/20200812_demonstrator/20200812_demonstrator.jpg');"
+    >
+      <div class="project-banner-overlay">
+        <h1>[Arduino] Vessel Motion Demonstrator</h1>
+      </div>
+    </section>
+
+    <section class="project-meta">
+      <p class="project-date">August 12, 2020</p>
+    </section>
+
+    <section class="page-content">
+      <p>
+        Why do we need to worry about wave frequencies when designing equipment for an offshore vessel?
+      </p>
+
+      <p>
+        It can be tempting to underestimate the power of the ocean, which is why I built a scale model to demonstrate how wave frequencies affect vessel roll motions. If a vessel is rocked back and forth at its resonant frequency, then motions can become bigger and bigger and there is a risk of breaking equipment, or at the very least becoming seasick.
+      </p>
+
+      <figure class="content-figure">
+        <iframe
+          width="824"
+          height="464"
+          src="https://www.youtube.com/embed/8HvmgFtARY8"
+          title="Eigenperiod demonstration"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        <figcaption>
+          Glad I'm not on that vessel
+        </figcaption>
+      </figure>
+
+      <p>
+        I designed this model using AutoCad for the laser cut parts and Autodesk Inventor for the overall 3D model. I programmed two arduinos to operate the device – one to manage the stepper motor behaviour, and the other to coordinate the user inputs and motor and LED outputs.
+      </p>
+
+      <p>
+        Check out the build in the video below!
+      </p>
+
+      <figure class="content-figure">
+        <iframe
+          width="824"
+          height="464"
+          src="https://www.youtube.com/embed/Za6jmdtYCy4"
+          title="Vessel Motion Demonstrator"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        <figcaption>
+          Build video of the demonstrator coming together
+        </figcaption>
+      </figure>
+
+    </section>
+
+  </main>
+
+  <div class="lightbox-overlay" id="lightbox">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script src="../../../../scripts.js"></script>
+</body>
+</html>
