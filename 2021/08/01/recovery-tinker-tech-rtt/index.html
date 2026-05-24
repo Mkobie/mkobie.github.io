@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recovery Tinker Tech (RTT)</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-title site-title-link" href="../../../../index.html">Marianne Kobierski</a>
+    <a class="about-link" href="../../../../about.html">About me</a>
+  </header>
+
+  <main>
+    <section
+      class="project-banner"
+      style="background-image: url('../../../../assets/images/20210801_RTT/20210801_cube2.png'); background-size: 172%;"
+    >
+      <div class="project-banner-overlay">
+        <h1>Recovery Tinker Tech (RTT)</h1>
+      </div>
+    </section>
+
+    <section class="project-meta">
+      <p class="project-date">August 1, 2021</p>
+    </section>
+
+    <section class="page-content">
+      <p>
+        In 2019 I hit my head while playing sports, and gave myself a concussion. Occupational therapy helped my recovery, but keeping track of how I was doing (mood, headaches), and how I was spending my time (enough rest breaks?) was so boring and time-consuming that I didn’t do it consistently.
+      </p>
+
+      <p>
+        Of course necessity is the mother of invention, so I started dreaming up some recovery tech that I could make:
+      </p>
+
+      <ol>
+        <li>Mood Tracker Smartwatch App</li>
+        <li>Time tracking cube</li>
+      </ol>
+
+      <h2>Mood Tracker Smartwatch App</h2>
+
+      <p>
+        I figured my Samsung smart watch was an android device, so making an app for it would be pretty straight forward. Turns out that apps for this watch have to be developed using the Tizen Studio IDE instead of the more common Visual Studio IDE. But in the end I cobbled together a nifty app where I could click on how I was feeling (or if I had a headache), and later export this data into an excel graph.
+      </p>
+
+      <figure class="content-figure">
+        <iframe
+          width="824"
+          height="464"
+          src="https://www.youtube.com/embed/zgdXPMSdC1c"
+          title="Mood Tracker App"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        <figcaption>
+          Demo video of my mood tracker smartwatch application
+        </figcaption>
+      </figure>
+
+      <figure class="content-figure">
+        <img
+          src="../../../../assets/images/20210801_RTT/20210801_moodtracker.png"
+          alt="Graph of mood and headaches over time"
+        >
+        <figcaption>
+          Graph of mood (coloured dots) and headaches (red x-es on the top row) over 3 months - now that's a lot of headaches!
+        </figcaption>
+      </figure>
+
+      <h2>Time tracking cube</h2>
+
+      <p>
+        For me the biggest piece to occupational therapy was managing my time through the day so that I had a mix of easy, medium, and difficult tasks, interspersed with regular rest moments. My therapist had a model whereby each difficulty level is given a number of points, and each day ends up with an overall point score. I started with a low point budget for my days, which increased as I recovered more and more. To do away with pencil and paper time tracking, I decided to design a gadget that would track my time and task difficulty for me.
+      </p>
+
+      <figure class="content-figure">
+        <img
+          src="../../../../assets/images/20210801_RTT/20210801_pointsgraph.png"
+          alt="Graph of point spend per day, from pencil and paper tracking"
+          style="max-width: 80%;"
+        >
+        <figcaption>
+          Graph of point spend per day, from pencil and paper tracking
+        </figcaption>
+      </figure>
+
+      <p>
+        I came up with the idea of a gyroscope inside a cube, which would log which side is facing up, and for how long. I would send this data to my computer or phone via bluetooth, and automatically generate my weekly point expenditure graph.
+      </p>
+
+      <figure class="content-figure">
+        <img
+          src="../../../../assets/images/20210801_RTT/20210801_cubeconcept.jpg"
+          alt="Hand sketch of cube concept"
+          style="max-width: 50%;"
+        >
+        <figcaption>
+          The Cube concept
+        </figcaption>
+      </figure>
+
+      <p>
+        Next I fleshed out how exactly I could bring the concept to life, and started in on a functional prototype. I bought some parts (Beetle BLE Arduino, Grove 6-axis accelerometer & gyroscope, and LiPo battery), soldered them together, and decided that the accelerometer would track which side of the cube faced up just fine.
+      </p>
+
+      <figure class="content-figure">
+        <img
+          src="../../../../assets/images/20210801_RTT/20210801_worksession1.jpg"
+          alt="Work session 1 plan and execution notes"
+          style="max-width: 50%;"
+        >
+        <figcaption>
+          From plan (pencil) to execution (blue) there’s always questions and complications (red). Nothing that can’t be overcome though!
+        </figcaption>
+      </figure>
+
+      <figure class="content-figure">
+        <div class="image-collage">
+          <div class="collage-col">
+            <img src="../../../../assets/images/20210801_RTT/20210801_img1.jpg" alt="RTT project photo 1" data-group-index="0">
+            <img src="../../../../assets/images/20210801_RTT/20210801_img3.jpg" alt="RTT project photo 3" data-group-index="2">
+          </div>
+          <div class="collage-col">
+            <img src="../../../../assets/images/20210801_RTT/20210801_img2.jpg" alt="RTT project photo 2" data-group-index="1">
+            <img src="../../../../assets/images/20210801_RTT/20210801_img4.jpg" alt="RTT project photo 4" data-group-index="3">
+          </div>
+        </div>
+        <figcaption>
+          Soldering montage
+        </figcaption>
+      </figure>
+
+      <figure class="content-figure">
+        <iframe
+          width="824"
+          height="464"
+          src="https://www.youtube.com/embed/2Yav7ZYSX5o"
+          title="RTT Cube: Accelerometer functionality test"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        <figcaption>
+          Demo video of the accelerometer in action
+        </figcaption>
+      </figure>
+
+      <p>
+        Next step was to get the bluetooth working, and send the collected data to a MIT App Inventor app on my phone. MIT App Inventor is a free web application for making custom low-code cell phone apps. It’s a fantastic initiative by Google and MIT, but I was struggling to get anywhere until I found <a href="http://www.martyncurrey.com/arduino-hm-10-and-app-inventor-2/" target="_blank">a BLE program by a fellow named Martyn Currey</a>, which solved most of my difficulties. Thanks Martyn!
+      </p>
+
+      <figure class="content-figure">
+        <iframe
+          width="824"
+          height="464"
+          src="https://www.youtube.com/embed/c-OGehUH-hk"
+          title="RTT Cube: Sending data via Bluetooth"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        <figcaption>
+          Demo video of sending data via Bluetooth
+        </figcaption>
+      </figure>
+
+      <p>
+        At this point I remembered that arduinos aren’t great with time. My beetle could count elapsed time, but wouldn’t know one day from the next. So I found an Adafruit DS1307 Real Time Clock (RTC) to add to the mix.
+      </p>
+
+      <figure class="content-figure">
+        <img
+          src="../../../../assets/images/20210801_RTT/20210801_realtimeclock.jpg"
+          alt="Image of a real time clock (RTC board)"
+          style="max-width: 50%;"
+        >
+        <figcaption>
+          Real Time Clock for correct date-time info
+        </figcaption>
+      </figure>
+
+      <p>
+        Now that I could collect info about the date, the time, and which side is facing up, and knew how to send data from the arduino to my phone in one long string of characters, it was time to figure out how to parse and format the bluetooth data and save it in the app’s database for future use.
+      </p>
+
+      <figure class="content-figure">
+        <img
+          src="../../../../assets/images/20210801_RTT/20210801_worksession2.png"
+          alt="Work session 2 plan and execution notes"
+          style="max-width: 50%;"
+        >
+        <figcaption>
+          The screencap shows the corresponding MIT App Inventor code block
+        </figcaption>
+      </figure>
+
+      <figure class="content-figure">
+        <iframe
+          width="824"
+          height="464"
+          src="https://www.youtube.com/embed/AhY5jEeQZ-k"
+          title="RTT Cube: Showing data in app"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        <figcaption>
+          Demo video of the running app
+        </figcaption>
+      </figure>
+
+      <p>
+        Electrical/ programming is looking good, but what about the physical part?
+      </p>
+
+      <p>
+        I adapted a really nice model of <a href="https://0x7d.com/2013/3d-printed-portal-companion-cube/" target="_blank">a companion cube by 0x7D</a> (Kevin), to hold the battery and 2 PCBs that I would mount the arduino, accelerometer, RTC, and an additional battery board on, and friend printed some of the parts for me. The battery fits inside beautifully, I need to update the model to fit the prototype boards, button, and charge port a little better.
+      </p>
+
+      <figure class="content-figure">
+        <img
+          src="../../../../assets/images/20210801_RTT/20210801_cadandproto.png"
+          alt="CAD image of cube next to real printed out cube"
+        >
+        <figcaption>
+          Modified Inventor model of cube, and printed cube with the parts that will eventually fit inside
+        </figcaption>
+      </figure>
+
+      <p>
+        Note from 2023: I ended up starting a new job rife with mechatronics tinkering, and ended up putting this project down. Who knows, maybe it will regain new life again some day.
+      </p>
+
+    </section>
+
+  </main>
+
+  <div class="lightbox-overlay" id="lightbox">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script src="../../../../scripts.js"></script>
+</body>
+</html>
