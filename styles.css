@@ -144,39 +144,6 @@ a:hover {
   display: block;
 }
 
-/* Temporary placeholder tile colours */
-.tile-1 {
-  background: #d03f05;
-}
-
-.tile-2 {
-  background: #b93708;
-}
-
-.tile-3 {
-  background: #e0642d;
-}
-
-.tile-4 {
-  background: #8f2c08;
-}
-
-.tile-5 {
-  background: #f08a55;
-}
-
-.tile-6 {
-  background: #6f2409;
-}
-
-.tile-7 {
-  background: #c75524;
-}
-
-.tile-8 {
-  background: #edb08e;
-}
-
 /* Project page banner */
 .project-banner {
   width: 100%;

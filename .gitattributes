@@ -1,0 +1,14 @@
+# Normalize all text files to LF, in the repo and in the working tree.
+# The site is served from Linux and the repo already stores LF throughout, so
+# checking out LF keeps the working tree byte-identical to what is committed.
+# This overrides core.autocrlf, which would otherwise hand out CRLF copies on
+# Windows and reintroduce mixed endings whenever a tool rewrites a file.
+* text=auto eol=lf
+
+# Media: never touched, never diffed as text.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.mp4  binary
+*.ico  binary

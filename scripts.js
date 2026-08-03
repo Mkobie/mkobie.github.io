@@ -1,5 +1,8 @@
-const overlay = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
+const overlay = document.createElement('div');
+overlay.className = 'lightbox-overlay';
+
+const lightboxImg = document.createElement('img');
+overlay.appendChild(lightboxImg);
 
 const prevBtn = document.createElement('button');
 const nextBtn = document.createElement('button');
@@ -9,6 +12,8 @@ prevBtn.textContent = '‹';
 nextBtn.textContent = '›';
 overlay.appendChild(prevBtn);
 overlay.appendChild(nextBtn);
+
+document.body.appendChild(overlay);
 
 let currentGroup = [];
 let currentIndex = 0;
