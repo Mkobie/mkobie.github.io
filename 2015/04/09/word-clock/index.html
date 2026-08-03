@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Word Clock</title>
+  <link rel="stylesheet" href="../../../../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-title site-title-link" href="../../../../index.html">Marianne Kobierski</a>
+    <a class="about-link" href="../../../../about.html">About me</a>
+  </header>
+
+  <main>
+    <section
+      class="project-banner"
+      style="background-image: url('../../../../assets/images/20150409_clock/word_clock.jpg');"
+    >
+      <div class="project-banner-overlay">
+        <h1>Word Clock</h1>
+      </div>
+    </section>
+
+    <section class="project-meta">
+      <p class="project-date">April 9, 2015</p>
+    </section>
+
+    <section class="page-content">
+      <p>
+        Inspired by <a href="https://makezine.com/projects/small-word-clock/" target="_blank">a “Make:” project</a>, I partnered with a friend to design and fabricate a quirky digital alarm clock that spells out the current time.  Check out the YouTube video at the end of this post for a demo of the clock’s functions.
+      </p>
+
+      <p>
+        I was responsible for the electronics and fabrication; my partner programmed the Arduino to control the clock.
+      </p>
+
+      <p>
+        We used a DS1307 RTC to “remember” the time – I modeled the circuit in Protel and fabricated it on a PCB milling machine, and we used two MAX7219 LED drivers to control the individual LEDs from an Arduino.  I used autoCAD for the lettering layout, and fabricated it on a lasercutter.
+      </p>
+
+      <p>
+        Take a look!
+      </p>
+
+      <figure class="content-figure">
+        <iframe
+          width="824"
+          height="464"
+          src="https://www.youtube.com/embed/QMq5c-QToSA"
+          title="Word clock demo"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </figure>
+
+    </section>
+
+  </main>
+
+  <script src="../../../../scripts.js"></script>
+</body>
+</html>
